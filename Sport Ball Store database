@@ -1,0 +1,29 @@
+First I created a store database:
+CREATE TABLE balls (id integer primary key, name text, quantity integer, cost integer, sold_items integer);
+
+INSERT INTO balls Values
+(1, "volleyball a", 8, 11, 3),
+(2, "volleyball b", 7, 10, 5),
+(3, "volleyball c", 6, 9, 4),
+(4, "volleyball d", 5, 8, 2),
+(5, "soccerball a", 6, 12, 4),
+(6, "soccerball b", 5, 11, 3),
+(7, "soccerball c", 6, 10, 5),
+(8, "soccerball d", 3, 9, 1),
+(9, "soccerball e", 3, 8, 2),
+(10, "basketball", 10, 15, 4),
+(11, "football", 8, 13, 5),
+(12, "baseball", 15, 5, 3),
+(13, "tennisball", 12, 3, 4),
+(14, "kickball", 9, 11, 3),
+(15, "dodgeball", 7, 8, 2);
+SELECT * FROM balls;
+
+Then displayed the database ordered by Cost:
+SELECT * From balls
+ORDER BY cost asc;
+
+Then displayed the database sum of quantity where cost is greater or equal to 9:
+SELECT sum(quantity) From balls 
+WHERE cost >= 9;
+
